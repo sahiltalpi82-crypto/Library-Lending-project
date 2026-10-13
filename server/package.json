@@ -1,0 +1,25 @@
+{
+  "name": "library-lending-server",
+  "version": "1.0.0",
+  "description": "College Library Book Lending System - REST API (Express + Sequelize + MySQL)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "db:create": "sequelize-cli db:create",
+    "db:migrate": "sequelize-cli db:migrate",
+    "db:seed": "sequelize-cli db:seed:all",
+    "db:setup": "npm run db:create && npm run db:migrate && npm run db:seed",
+    "db:reset": "sequelize-cli db:drop && npm run db:setup"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mysql2": "^3.11.0",
+    "sequelize": "^6.37.3"
+  },
+  "devDependencies": {
+    "sequelize-cli": "^6.6.2"
+  }
+}
